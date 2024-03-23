@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company Name - Store</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    .header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .company-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .slogan {
+        font-size: 16px;
+        font-style: italic;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .first-page-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .hi{
+        background-color: #000000;
+    }
+    .product-image {
+        max-width: 50%;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    .product-options {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .product-option {
+        margin: 0 10px;
+        cursor: pointer;
+        border-radius: 10%;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        width: 60px; /* Adjust width as needed */
+        height: 60px; /* Adjust height as needed */
+    }
+
+    .product-option img {
+        max-width: 100%;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .product-option:hover, .selected {
+        transform: scale(1.1);
+    }
+
+    @media only screen and (max-width: 768px) {
+        .company-name {
+            font-size: 20px;
+        }
+
+        .slogan {
+            font-size: 14px;
+        }
+    }
+</style>
+          <style>
+    body1 {
+  font-family: Arial, sans-serif;
+}
+
+.container1 {
+  max-width: 700px;
+  margin: right;
+  padding: 10px;
+}
+
+.header1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.content1 {
+  padding: 2px;
+  background-color: #666666;
+  border-radius: 50px;
+}
+
+.body-text1 {
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.bullet-list1 {
+  margin-top: px;
+}
+
+.bullet-list li1 {
+  margin-bottom: 1px;
+}
+  .content1 {
+    text-align: right; /* Align content to the right */
+  }
+</style>
+
+</head>
+<body>
+
+<header class="header">
+    <div class="company-name"><a href="hiiii.html">شركة المهندس العربي للوكالات</a></div>
+    <div class="slogan">خل الخشب</div>
+</header>
+
+<div class="container">
+    <div class="first-page-content">
+        <img src="images/Factory-Natural-Wood-Vinegar-Pyroligneous-Acid-Improvide-Air.jpg" alt="Product Image" class="product-image">
+        <div class="product-options">
+            <div class="product-option selected" onclick="changeImage('1L')">
+                <img src="images/b9687a29-4191-4f0d-95e3-9043fdff4c6e.jpg" alt="1L Option">
+            </div>
+            <div class="product-option" onclick="changeImage('5L')">
+                <img src="images/1705c7dc-c441-4b4b-b5e2-1287e6ac5e07.jfif" alt="5L Option">
+            </div>
+            <div class="product-option" onclick="changeImage('20L')">
+                <img src="images/a9b0587f-c7ea-4832-b1b8-72a3cf41969d.jfif" alt="20L Option">
+                <p>1 لتر</p>
+            </div>
+        </div>
+
+        <div class="product-details">
+            <h2 class="product-title"></h2>
+            <p class="product-description">
+
+ </div>
+    </div>
+</div>
+
+<script>
+    function changeImage(size) {
+        var image = document.querySelector('.product-image');
+        switch (size) {
+            case '1L':
+                image.src = 'images/4a1901c1-95b5-44a9-a5a2-c0002d3b8993.jfif';
+                break;
+            case '5L':
+                image.src = 'images/1705c7dc-c441-4b4b-b5e2-1287e6ac5e07.jpg';
+                break;
+            case '20L':
+                image.src = 'images/c0bf6a29-c91e-402c-93cc-31d3330e3566.jfif';
+                break;
+        }
+        updateOptions(size);
+        updateProductDetails(size);
+    }
+
+    function updateOptions(selectedSize) {
+        var options = document.querySelectorAll('.product-option');
+        options.forEach(function(option) {
+            option.classList.remove('selected');
+        });
+
+        var selectedOption = document.querySelector('.product-option img[alt="' + selectedSize + ' Option"]');
+        selectedOption.parentElement.classList.add('selected');
+    }
+
+    function updateProductDetails(size) {
+        var productTitle = document.querySelector('.product-title');
+        var productDescription = document.querySelector('.product-description');
+
+        switch (size) {
+            case '1L':
+                productTitle.textContent = 'JD9.99 - 1 لتر';
+                productDescription.textContent = 'وصف المنتج لحجم 1 لتر';
+                break;
+            case '5L':
+                productTitle.textContent = 'JD15.99 - 5 لتر';
+                productDescription.textContent = 'وصف المنتج لحجم 5 لتر';
+                break;
+            case '20L':
+                productTitle.textContent = 'JD49.99 - 20 لتر';
+                productDescription.textContent = 'وصف المنتج لحجم 20 لتر';
+                break;
+        }
+    }
+</script>
+
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
+            /* Your content styles here */
+            text-align: center;
+            padding: 20px;
+        }
+        .social-icons {
+            text-align: center;
+            margin-bottom: 1px;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .social-icons img {
+            width: 25px; /* Adjust the size of the icons */
+            height: auto;
+        }
+    </style>
+
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        /* Navigation styles */
+nav {
+    position: fixed; /* Set position to fixed to make the navigation fixed on the screen */
+    top: 550px; /* Position the navigation 20px from the top of the viewport */
+    right: 20px; /* Position the navigation 20px from the right side of the viewport */
+    z-index: 9999; /* Set a high z-index to ensure the navigation appears above other elements */
+}
+
+
+
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            background-color: #666666;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #ccc;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+            line-height: 50px;
+            overflow-y:252px ;
+            height:auto; /* Adjust this value as needed */
+            max-height: auto; /* Adjust this value based on your navigation height */
+        }
+
+        #vegetable-pan {
+            background-color: #99ff99;
+        }
+
+        #fruit-basket {
+            background-color: #4d94ff;
+        }
+
+        #meat-section {
+            background-color: #ff944d;
+        }
+        #gta {
+            background-color: #ff4dd2;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+
+
+
+
+<nav>
+    <ul>
+        <li><a href="#vegetable-pan">ميزات خل الخشب للنبات..</a></li>
+        <li><a href="#fruit-basket">ميزات خل الخشب للحيوان</a></li>
+        <li><a href="#meat-section">ميزات خل الخشب للانسان</a></li>
+        <li><a href="#gta"> مواقع التواصل الاشتماعي.</a></li>
+
+    </ul>
+</nav>
+
+<section id="vegetable-pan">
+    <h1>ميزات خل الخشب للنبات</h1>
+    <p>
+        <br>1-الحفاظ على التربة رطبة: يساعد القش في الحفاظ على رطوبة التربة عن طريق منع تبخر الماء. يقلل هذا من حاجة النباتات للري بشكل متكرر ويساعدها في البقاء رطبة لفترات أطول</br>
+        <br>2-تقليل نمو الأعشاب الضارة: يوفر القش طبقة مانعة لنمو الأعشاب الضارة، مما يقلل من الحاجة إلى التخلص منها يدويًا أو باستخدام مبيدات الأعشاب</br>
+
+        <br>3-توفير العزل الحراري: يعمل القش على توفير طبقة عازلة فوق التربة، مما يساعد في تنظيم درجة حرارة التربة. يقلل هذا من تقلبات درجة الحرارة التي قد تؤثر سلبًا على جذور النباتات</br>
+
+        <br>4-تحسين جودة التربة: يمكن للقش أن يتحلل بمرور الوقت ويضيف مواد عضوية إلى التربة، مما يساعد في تحسين هيكل التربة وإثراءها بالعناصر الغذائية الأساسية</br>
+
+        <br>5-تقليل الرياح الجافة: يمكن للقش أن يوفر حاجزًا طبيعيًا يحمي النباتات من الرياح الجافة القاسية، مما يقلل من فقدان الماء من خلال تبخره بفعل الرياح القوية</br>
+
+        <br>6-توفير ملاذ للحشرات المفيدة: يمكن للقش أن يوفر بيئة مثالية للحشرات المفيدة مثل الدودة الحمراء والديدان الأخرى التي تساعد في تحسين جودة التربة وتعزيز صحة النباتات</br>
+
+        <br>7-تقليل تآكل التربة: عندما يتحلل القش، يوفر مساحة للهواء والماء للوصول إلى جذور النباتات دون أن يتعرض التربة للتآكل الذي قد يحدث عند استخدام مواد أخرى مثل القشدار أو الحصى</br>
+
+        <br>8-تحسين جمالية المناظر الطبيعية: يضيف القش طبقة طبيعية وجميلة إلى الحديقة أو المزرعة، مما يعزز جمالية المناظر الطبيعية ويضفي لمسة من الطبيعية الخضراء على المكان
+    </p>
+</section>
+
+<section id="fruit-basket">
+    <h3>ميزات خل الخشب للانسان</h3>
+    <p>
+        <br>1-تحسين هضم الطعام: خل الخشب يمكن أن يساعد في تحفيز إنتاج الأحماض المعوية والإنزيمات الهاضمة، مما يعزز هضم الطعام وامتصاص العناصر الغذائية بشكل أفضل.</br>
+        <br>2-تنظيم مستويات السكر في الدم: هناك بعض الأبحاث التي تشير إلى أن خل الخشب يمكن أن يساعد في تقليل مستويات السكر في الدم عن طريق تحسين حساسية الأنسولين.</br>
+
+        <br>3-تقوية جهاز المناعة: يحتوي خل الخشب على مضادات أكسدة ومواد مضادة للالتهابات التي قد تساعد في تعزيز جهاز المناعة وحماية الجسم من الأمراض.</br>
+
+        <br>4-تخفيف الالتهابات والآلام: يُعتقد أن خل الخشب له خصائص مضادة للالتهابات ومسكنة للآلام، مما يجعله خيارًا شائعًا للتخفيف من آلام العضلات والمفاصل.</br>
+
+        <br>5-تنظيم الوزن: يمكن لبعض الدراسات أن تشير إلى أن استهلاك خل الخشب قد يساعد في تنظيم الوزن عن طريق تحسين الشعور بالشبع وتقليل الرغبة في تناول الطعام.</br>
+
+        <br>6-تنقية البشرة: يُعتقد أن استخدام خل الخشب كمحلول مخفف بالماء لتنظيف البشرة يمكن أن يساعد في تقليل حب الشباب وتفتيح البشرة.</br>
+
+        <br>7-تحسين صحة القلب والأوعية الدموية: بفضل قدرته على خفض مستويات السكر والكولسترول، يمكن أن يكون خل الخشب مفيدًا لصحة القلب والأوعية الدموية. .</br>
+
+        <br>8-تقليل رائحة الفم: بفضل خصائصه المضادة للبكتيريا، يمكن استخدام خل الخشب كمضمضة لتقليل رائحة الفم الكريهة.
+    </p>
+
+</section>
+
+<section id="meat-section">
+  <h3>ميزات خل الخشب للحيوان</h3>
+    <p>
+        <br>1-تطهير الجروح: يمكن استخدام خل الخشب لتطهير الجروح السطحية للحيوانات والمساعدة في الوقاية من العدوى البكتيرية. </br>
+        <br>2-تهدئة الحكة: يعتبر خل الخشب مهدئًا للحكة، وبالتالي يمكن استخدامه للحيوانات التي تعاني من الحساسية أو التهاب الجلد. </br>
+
+        <br>3-تنظيف الأذن: يمكن استخدام خل الخشب المخفف بالماء لتنظيف أذن الحيوانات، مما يساعد في إزالة الشمع والأوساخ. </br>
+
+        <br>4-مكافحة الطفيليات الخارجية: يمكن أن يكون خل الخشب فعالًا في مكافحة القمل والقراد وغيرها من الطفيليات الخارجية عند استخدامه كمبيد حشري. </br>
+
+        <br>5-معادلة حموضة المعدة: يمكن أن يساعد خل الخشب في تحقيق توازن حموضة المعدة لدى الحيوانات، وبالتالي يُعتقد أنه يمكن استخدامه كمساعد هضمي. </br>
+
+        <br>6-تنظيف الأسنان وتخفيف رائحة الفم: قد يكون استخدام محلول خل الخشب مخففًا بالماء لغسل أسنان الحيوانات فعالًا في تنظيف الأسنان وتقليل رائحة الفم الكريهة. </br>
+
+        <br>7-تخفيف التهابات المفاصل: هناك بعض الادعاءات بأن خل الخشب يمكن أن يساعد في تخفيف التهابات المفاصل لدى الحيوانات.  </br>
+
+        <br>8-تثبيت درجة الحموضة في المياه: إذا كنت تستخدم المياه في حوض السمك، يمكن إضافة قليل من خل الخشب لمساعدة في تثبيت درجة الحموضة وإنشاء بيئة مناسبة للأسماك.
+    </p>
+</section>
+
+<script>
+    // Smooth scrolling functionality
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+<section id="gta">
+    <div class="social-icons">
+        <a href="https://www.facebook.com">
+            <img src="images/2023_Facebook_icon.svg.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com">
+            <img src="images/Instagram_logo_2022.svg.png" alt="Instagram">
+        </a>
+        <a href="https://twitter.com">
+            <img src="images/Logo_of_Twitter.svg.png" alt="Twitter">
+        </a>
+
+    </div>
+</section>
+</body>
+</html>
