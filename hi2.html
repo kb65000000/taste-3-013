@@ -4,6 +4,50 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Company Name - Store</title>
+
+  <style>
+        nav1 {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav1 img {
+            height: 40px; /* Adjust the height of the logo as needed */
+            vertical-align: middle;
+            margin-right: 10px; /* Add some spacing between the logo and links */
+        }
+        nav1 ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline;
+        }
+        nav1 ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav1 ul li:last-child {
+            margin-right: 0;
+        }
+        nav1 ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+
+
+<nav1>
+    <ul>
+        <li><a href="hiiii.html">Home</a></li>
+        <li><a href="hi2.html">Our Products</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About Us</a></li>
+    </ul>
+        <img src="images/410223336_355381217093865_7293931128814300912_n.jpg" alt="Logo">
+
+</nav1>
+
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -13,12 +57,13 @@
         color: #333;
     }
 
-    .header {
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-    }
+  header {
+    background-image: url("images/grass_10surprising_opengraph-1024x536.jpg");
+    background-color: #000; /* Fallback color in case the image is not available */
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+}
 
     .company-name {
         font-size: 24px;
@@ -132,8 +177,8 @@
 <body>
 
 <header class="header">
-    <div class="company-name"><a href="hiiii.html">شركة المهندس العربي للوكالات</a></div>
-    <div class="slogan">خل الخشب</div>
+    <div class="company-name"><h3>شركة المهندس العربي للوكالات</h3></div>
+    <div class="slogan"><h4>خل الخشب</h4></div>
 </header>
 
 <div class="container">
@@ -238,16 +283,14 @@
             width: 25px; /* Adjust the size of the icons */
             height: auto;
         }
-    </style>
+</style>
 
-
-
-    <style>
+<style>
         body {
             font-family: Arial, sans-serif;
             direction: rtl;
             margin: 0;
-            padding: 0;
+            padding: ;
             background-color: #f2f2f2;
             color: #333;
         }
@@ -255,7 +298,7 @@
         /* Navigation styles */
 nav {
     position: fixed; /* Set position to fixed to make the navigation fixed on the screen */
-    top: 550px; /* Position the navigation 20px from the top of the viewport */
+    bottom:50px; /* Position the navigation 20px from the top of the viewport */
     right: 20px; /* Position the navigation 20px from the right side of the viewport */
     z-index: 9999; /* Set a high z-index to ensure the navigation appears above other elements */
 }
@@ -276,8 +319,8 @@ nav {
         nav ul li a {
             text-decoration: none;
             color: #333;
-            padding: 5px 10px;
-            background-color: #666666;
+            padding: px 1px;
+            background-color: #ffffff;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
