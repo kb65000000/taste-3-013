@@ -10,13 +10,12 @@
             padding: 10px;
             text-align: center;
             font-size: 2.vw;
-
         }
         nav1 img {
            height: 50px; /* Adjust the height of the logo as needed */
         width:50px;
             vertical-align: middle;
-            margin-right: 10px; /* Add some spacing between the logo and links */
+            margin-right:10px ; /* Add some spacing between the logo and links */
         }
         nav1 ul {
             list-style: none;
@@ -25,12 +24,11 @@
             display: inline;
         }
 
-        nav1 ul li:last-child {
-            margin-right: 0;
-        }
+
         nav1 ul li {
             display: inline;
             margin-right: 20px;
+
         }
                       /* Media queries */
         @media (max-width: 1000px) {
@@ -45,12 +43,16 @@
             text-decoration: none;
             color: #000;
 
+}
+
 
     </style>
 
 
 <nav1>
-            <img src="images/LOGO arab engineer - Google Chrome 3_24_2024 9_33_47 PM.png" alt="Logo">
+        <a href="index.html"><img src="images/LOGO arab engineer - Google Chrome 3_24_2024 9_33_47 PM.png" alt="Logo"></a>
+
+
 
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -103,9 +105,15 @@
             margin: 0 10px;
         }
         .social-icons img {
-            width: 50px; /* Adjust the size of the icons */
+            width: 30px; /* Adjust the size of the icons */
             height: auto;
         }
+               @media (max-width: 1000px) {
+           .social-icons img {
+            width: 20px; /* Adjust the size of the icons */
+            height: auto;
+
+}
     </style>
 
 
@@ -154,7 +162,7 @@
     header {
         background-color: #999; /* Fallback color in case the image is not available */
         color: #fff;
-        padding: 20px;
+        padding: 37px;
         text-align: center;
     }
 
@@ -167,9 +175,17 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
+     h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
     h1 {
-        margin-top: 0;
+        font-size: 1.5em;
+        margin-bottom: 1px;
     }
+}
 
     .top-products {
         display: flex;
@@ -225,20 +241,14 @@
 </style>
 
 
-<style>
-  .text-with-shadow {
-    text-shadow: 20px 20px 40px rgb(0, 0, 0); /* ظل لونه أسود */
-  }
-</style>
 
 </head>
 <body>
  <header>
 
-      <h1 class="text-with-shadow ">شركة المهندس العربي للوكالات</h1>
+      <h1 >شركة المهندس العربي للوكالات</h1>
     </header>
    <div class="container">
-        <h2>منتجاتنا</h2>
         <div class="top-products">
             <div class="product">
                 <a href="hi2.html">
@@ -255,7 +265,7 @@
 
             <div class="product">
                 <a href="hi4.html">
-                    <img src="images/ما_هو_القطران.jpg" alt="Tar">
+                    <img src="images/71FU4631doL.jpg" alt="Tar">
                     <div class="center-text">
                         <h2>قطران</h2>
                     <p>...اعرف المزيد عن القطران</p>
@@ -265,7 +275,7 @@
             </div>
             <div class="product">
                 <a href="coal.html">
-                    <img src="images/d1cb56f3-edd2-4938-954f-afc211336200_16x9_1200x676.webp" alt="Coal">
+                    <img src="images/87e22432-f2a4-4999-9522-8bdaa97e800c.jfif" alt="Coal">
 
                     <div class="center-text">
                     <h2>فحم</h2>
@@ -275,7 +285,7 @@
                 </a>
             </div>
         </div>
-<img src="images/LOGO arab engineer - Google Chrome 3_24_2024 9_33_47 PM.png" alt="">
+<img src="images/71933844897.jpg" alt="">
 <img src="images/Growth 20x18 copy - Google Chrome 3_24_2024 11_43_08 PM.png" alt="">
 <img src="images/338160234_1538796023312247_484610432182754607_n.jpg" alt="">
 
@@ -297,8 +307,25 @@
         <a href="https://twitter.com">
             <img src="images/Logo_of_Twitter.svg.png" alt="Twitter">
         </a>
+            <img id="secretImage" src="images/kb-logo_940147-5.avif" alt="Secret Image" onclick="checkClicks()">
+
     </div>
 
 
+
+
+    <script>
+        var clickCount = 0;
+
+        function checkClicks() {
+            clickCount++;
+            if (clickCount >= 3) {
+                window.location.href = 'secret.html'; // Redirect to the secret page
+            }
+        }
+    </script>
+  <footer>
+        &copy; 2024 khaled badran
+    </footer>
 </body>
 </html>
